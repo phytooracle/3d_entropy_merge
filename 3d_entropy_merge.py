@@ -34,13 +34,6 @@ def get_args():
                         type=str,
                         default='individual_plants_out/plant_reports')
 
-    parser.add_argument('-o',
-                        '--output_dir',
-                        help='Output directory to save merged CSV.',
-                        metavar='str',
-                        type=str,
-                        required=True)
-
     parser.add_argument('-d',
                         '--date',
                         help='Collection date for the scan.',
@@ -91,8 +84,8 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
-    generate_tda_csv(args.date, args.input_dir_entropy, args.output_dir)
-    generate_stats_csv(args.date, args.input_dir_stats, args.output_dir)
+    generate_tda_csv(args.date, args.input_dir_entropy, args.date)
+    generate_stats_csv(args.date, args.input_dir_stats, args.date)
 
 
 # --------------------------------------------------
