@@ -85,7 +85,7 @@ def main():
 
     args = get_args()
     generate_tda_csv(args.date, args.input_dir_entropy, args.date)
-    generate_stats_csv(args.date, args.input_dir_stats, args.date)
+    #generate_stats_csv(args.date, args.input_dir_stats, args.date)
 
 
 # --------------------------------------------------
